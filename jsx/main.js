@@ -23,13 +23,11 @@ var PodcastBox = React.createClass({
       },
     render : function(){
         return (
-            <div>
-                <form class="pure-form">
-                    <input type="text" onChange={this.onChange} value={this.state.text} class="pure-input-rounded">
-                </form>
-                <div className="podcastBox">
-                    <PodcastList podcasts={this.state.podcasts} />
-                </div>
+            <form class="pure-form">
+                <input type="text" onChange={this.onChange} value={this.state.text} class="pure-input-rounded" />
+            </form>
+            <div className="podcastBox">
+                <PodcastList podcasts={this.state.podcasts} />
             </div>
         );
     }
