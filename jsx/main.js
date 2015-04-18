@@ -9,23 +9,20 @@ var PodcastBox = React.createClass({
       },
     componentDidMount: function() {
         $.ajax({
-      url: 'http://service.fxos.com.br/podcasts?limit=3',
-      dataType: 'json',
-      success: function(data) {
-          console.log('data', data);
-        this.setState({podcasts: data});
-      }.bind(this),
-      error: function(xhr, status, err) {
-        console.error(this.props.url, status, err.toString());
-      }.bind(this)
-    });
+              url: 'http://service.fxos.com.br/podcasts?limit=3',
+              dataType: 'json',
+              success: function(data) {
+                  console.log('data', data);
+                this.setState({podcasts: data});
+              }.bind(this),
+              error: function(xhr, status, err) {
+                console.error(this.props.url, status, err.toString());
+              }.bind(this)
+        });
         
-      },
+    },
     render : function(){
         return (
-            <form class="pure-form">
-                <input type="text" onChange={this.onChange} value={this.state.text} class="pure-input-rounded" />
-            </form>
             <div className="podcastBox">
                 <PodcastList podcasts={this.state.podcasts} />
             </div>
@@ -59,7 +56,15 @@ var PodcastItem = React.createClass({
         );
     }
 });
-
+var PodcastSearchForm = React.createClass({
+    render : function(){
+        return (
+            <form class="pure-form">
+                <input type="text" onChange={this.onChange} value={this.state.text} class="pure-input-rounded" />
+            </form>
+        );
+    }
+});
 var PodcastTitle = React.createClass({
     render : function(){
         return (
