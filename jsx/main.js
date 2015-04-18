@@ -1,12 +1,15 @@
 var podcasts = [{title:"asdf1"},{title:"asdf2"},{title:"asdf3"}];
 
 var PodcastBox = React.createClass({
+    onChange: function(e) {
+        this.setState({text: e.target.value});
+    },
     getInitialState: function() {
         return {podcasts: []};
       },
     componentDidMount: function() {
         $.ajax({
-      url: 'http://service.fxos.com.br/podcasts?query=podcaster.name=eslPod&limit=3',
+      url: 'http://service.fxos.com.br/podcasts?limit=3',
       dataType: 'json',
       success: function(data) {
           console.log('data', data);
@@ -20,6 +23,9 @@ var PodcastBox = React.createClass({
       },
     render : function(){
         return (
+            <form class="pure-form">
+                <input type="text" onChange={this.onChange} value={this.state.text} class="pure-input-rounded">
+            </form>
             <div className="podcastBox">
                 <PodcastList podcasts={this.state.podcasts} />
             </div>
