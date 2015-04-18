@@ -71,5 +71,5 @@ var PodcastAudio = React.createClass({
 
 React.render(
     <PodcastBox podcasts={podcasts}/>,
-    document.getElementById("pod-body")
+    document.getElementById("podcatcher-body")
 );
