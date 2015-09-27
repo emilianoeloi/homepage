@@ -170,7 +170,9 @@
     jx.load('http://service.fxos.com.br/instagram/lastOneImage', function(data){
         var data = JSON.parse(data);
         var cover = document.querySelector(".splash-container");
+        var caption = document.querySelector(".splash-head");
         cover.style.backgroundImage = 'url('+data.url+')';
+        caption.innerHTML = data.captionText;
     })
 </script>
     
