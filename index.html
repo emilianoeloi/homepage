@@ -4,36 +4,36 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Desenvolvedor Mobile baseado no Rio de Janeiro.">
-    
+
     <meta name="apple-itunes-app" content="app-id=1081106077, app-argument=eloi://emiliano.bocamuchas.org">
-    
+
     <meta property="og:title" content="Emiliano Eloi Silva Barbosa &lt;emilianoeloi@gmail.com&gt;" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="http://emiliano.bocamuchas.org/index.html" />
     <meta property="og:image" content="http://emiliano.bocamuchas.org/img/image.jpeg" />
     <meta property="og:image:width" content="512" />
     <meta property="og:image:height" content="512" />
-    
+
     <link rel="icon" type="image/x-icon" href="http://emiliano.bocamuchas.org/img/favicon.ico" />
-    
+
     <link rel="apple-touch-icon" href="img/touch-icon-iphone.png">
     <link rel="apple-touch-icon" sizes="76x76" href="img/touch-icon-ipad.png">
     <link rel="apple-touch-icon" sizes="120x120" href="img/touch-icon-iphone-120x120.png">
     <link rel="apple-touch-icon" sizes="152x152" href="img/touch-icon-iphone-152x152.png">
     <link rel="apple-touch-icon" sizes="180x180" href="img/touch-icon-iphone-180x180.png">
     <meta name="apple-mobile-web-app-capable" content="yes">
-    
+
     <meta property="al:ios:url" content="eloi://emiliano.bocamuchas.org" />
     <meta property="al:ios:app_store_id" content="1081106077" />
     <meta property="al:ios:app_name" content="Eloi" />
     <meta property="og:title" content="Eloi - Um Estudo sobre a Search API" />
     <meta property="og:type" content="website" />
-    
+
     <meta name="twitter:app:name:iphone" content="Eloi">
     <meta name="twitter:app:url:iphone" content="eloi://emiliano.bocamuchas.org">
     <meta name="twitter:app:id:iphone" content="1081106077">
     <meta name="twitter:app:country" content="BR">
-    
+
     <title>Emiliano Eloi Silva Barbosa &lt;emilianoeloi@gmail.com&gt;</title>
 
 
@@ -57,7 +57,7 @@
 
 
     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
-    
+
     <!-- React -->
     <script src="jsx/react.js"></script>
     <script src="jsx/JSXTransformer.js"></script>
@@ -187,7 +187,7 @@
 </div>
 <script src="js/jx.js"></script>
 <script>
-    jx.load('http://service.fxos.com.br/blog/lastpost', function(data){
+    jx.load('http://www.podcatcher.com.br:3000/blog/lastpost', function(data){
         var data = JSON.parse(data);
         var title = document.querySelector("#wp-blog-title")
         var content = document.querySelector("#wp-blog-content");
@@ -195,7 +195,7 @@
         content.innerHTML = data.content.substring(0,200);
     });
 
-    jx.load('http://service.fxos.com.br/instagram/lastOneImage', function(data){
+    jx.load('http://www.podcatcher.com.br:3000/instagram/lastOneImage', function(data){
         var data = JSON.parse(data);
         var cover = document.querySelector(".splash-container");
         var caption = document.querySelector(".splash-head");
@@ -203,9 +203,9 @@
         caption.innerHTML = data.captionText;
     })
 </script>
-    
+
     <script type="text/jsx" src="jsx/main.js"></script>
-    
+
 <script src="http://yui.yahooapis.com/3.14.1/build/yui/yui.js"></script>
 <script>
     YUI().use('node-base', 'node-event-delegate', function (Y) {
