@@ -9,7 +9,7 @@ var PodcastBox = React.createClass({
       },
     componentDidMount: function() {
         $.ajax({
-              url: 'http://service.fxos.com.br/podcasts?limit=3',
+              url: 'http://www.podcatcher.com.br:3000/podcasts?limit=3',
               dataType: 'json',
               success: function(data) {
                   console.log('data', data);
@@ -19,7 +19,7 @@ var PodcastBox = React.createClass({
                 console.error(this.props.url, status, err.toString());
               }.bind(this)
         });
-        
+
     },
     render : function(){
         return (
@@ -52,7 +52,7 @@ var PodcastItem = React.createClass({
             <br />
             <PodcastAudio mp3={this.props.podcast.mp3}/>
             </div>
-            
+
         );
     }
 });
